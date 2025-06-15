@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason's Port</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kavivanar&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Reenie+Beanie&family=Smythe&display=swap"
+        rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+
+<div>
+    <header>
+        <div class="container-navbar">
+            <img src="a.jpg" alt="Logo">
+            <h2><a href="#vorin" style="text-decoration: none; color: black;">VORIN⚡ <br> The Techno-Phantom</a></h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="#" onclick="openForm()">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="contactFormModal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:999; overflow:auto;">
+        <div
+            style="background:white; max-width:500px; margin:80px auto; padding:30px; border-radius:10px; position:relative; font-family: 'Libre Caslon Text', serif; max-height:90vh; overflow-y:auto;">
+            <span onclick="closeForm()"
+                style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
+            <h2 style="text-align:center;">Book My Services</h2>
+            <form action="https://formsubmit.co/jasonantony02@gmail.com" method="POST">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_autoresponse"
+                    value="Thank you for contacting Jason! I will respond shortly.">
+                <input type="hidden" name="_captcha" value="false">
+
+                <label>Your Name:</label>
+                <input type="text" name="Name" required
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+
+                <label>Company Name:</label>
+                <input type="text" name="Company"
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+
+                <label>Contact Number:</label>
+                <input type="text" name="Contact Number" required
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+
+                <label>Service:</label>
+                <select name="Service Required" required
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+                    <option value="Web Development">Web Development</option>
+                    <option value="API Development">API Development</option>
+                    <option value="Deployment & Hosting">Deployment & Hosting</option>
+                    <option value="Debugging">Debugging</option>
+                </select>
+
+                <label>Describe Your Challenges:</label>
+                <textarea name="Challenges" rows="3" required
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;"></textarea>
+
+                <label>Your Email:</label>
+                <input type="email" name="Email" required
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+
+                <button type="submit"
+                    style="width:100%; padding:12px; background:black; color:white; border:none; font-weight:bold; border-radius:5px; cursor:pointer;">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="service-carousel">
+        <h2 class="title">My Developer Services</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide card">
+                    <h3>🌐 Web Development</h3>
+                    <p>Build dynamic websites using Flask/Django and modern UI frameworks.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide card">
+                    <h3>⚙️ API Development</h3>
+                    <p>Design secure REST APIs with authentication and full DB integration.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide card">
+                    <h3>📊 Dashboards & Admin Panels</h3>
+                    <p>Custom dashboards for bookings, analytics, and data management.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide card">
+                    <h3>🤖 Python Automation</h3>
+                    <p>Automate tasks with Python scripts, web scraping, and data handling.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="swiper-slide card">
+                    <h3>🔍 Debugging & Fixing</h3>
+                    <p>Find bugs, fix code, and optimize performance in Python apps.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="swiper-slide card">
+                    <h3>☁️ Deployment & Hosting</h3>
+                    <p>Deploy apps on Heroku, VPS, or basic cloud platforms (AWS/Azure).</p>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="swiper-slide card">
+                    <h3>🖥️ Office Tools & Typing</h3>
+                    <p>Train users in Office Suite and automate with Python tools.</p>
+                </div>
+            </div>
+            <!-- Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+
+    <footer class="footer"
+        style="background-color: whitesmoke; padding: 40px 0; border-top: 1px solid #ccc; font-family: 'Libre Caslon Text', serif;">
+        <div class="container-links" style="text-align: center; margin-bottom: 25px;">
+            <ul
+                style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <li><a href="#" style="text-decoration: none; color: #333; font-size: 16px;">Home</a></li>
+                <li><a href="#aboutme" style="text-decoration: none; color: #333; font-size: 16px;">About Me</a></li>
+                <li><a href="#" style="text-decoration: none; color: #333; font-size: 16px;">Services</a></li>
+                <li><a href="#" onclick="openForm()"
+                        style="text-decoration: none; color: #333; font-size: 16px;">Contact Me</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-container" id="footer" style="text-align: center; color: #444;">
+            <h2 style="margin-bottom: 10px; font-size: 22px;">Contact Me</h2>
+            <p style="margin-bottom: 20px; font-size: 15px;color: grey;">If you have any questions or would like to get
+                in touch,
+                feel free to reach out!</p>
+
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <a href="mailto:jasonantony02@gmail.com" target="_blank"
+                    style="color: #444; text-decoration: none; font-size: 16px;">
+                    <i class="fas fa-envelope" style="margin-right: 8px;"></i>Email
+                </a>
+                <a href="https://github.com/Jasonantony" target="_blank"
+                    style="color: #444; text-decoration: none; font-size: 16px;">
+                    <i class="fab fa-github" style="margin-right: 8px;"></i>GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/jasonanto007/" target="_blank"
+                    style="color: #444; text-decoration: none; font-size: 16px;">
+                    <i class="fab fa-linkedin" style="margin-right: 8px;"></i>LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2.2,
+                },
+                1024: {
+                    slidesPerView: 3.2,
+                },
+            },
+        });
+
+
+
+        function openForm() {
+            document.getElementById('contactFormModal').style.display = 'block';
+        }
+
+        function closeForm() {
+            document.getElementById('contactFormModal').style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('contactFormModal');
+            if (event.target == modal) {
+                closeForm();
+            }
+        }
+    </script>
+
+
+
+
+
+    </body>
+
+</html>

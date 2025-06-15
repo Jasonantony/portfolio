@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason's Port</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kavivanar&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Reenie+Beanie&family=Smythe&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container-navbar">
+            <img src="a.jpg" alt="Logo">
+            <h2><a href="#vorin" style="text-decoration: none; color: black;">VORIN⚡ <br> The Techno-Phantom</a></h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#aboutme">About Me</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="#" onclick="openForm()">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <div class="container" id="aboutme">
+        <div>
+            <h1>Welcome to My Portfolio</h1>
+            <p>
+                Hello! I'm <b>Jason Antony M</b>, a passionate Python Developer and a <u>Computer Science</u> student at
+                <a href="https://loyolacollege.ac.in/" target="_blank" rel="noopener noreferrer">Loyola College Of Arts
+                    and Science</a>. I specialize in building
+                clean, efficient, and scalable applications. With a strong foundation
+                in programming and hands-on experience through internships and personal projects, I strive to solve
+                real-world problems using code.
+            </p>
+            <ul>
+                <li>Python, JavaScript</li>
+                <li>Web development tools like HTML, CSS, and Bootstrap</li>
+                <li>Backend development using Python and SQLite3</li>
+            </ul>
+            <p>
+                I'm always eager to learn new technologies, collaborate with like-minded people, and turn ideas into
+                impactful solutions. When I’m not coding, you’ll find me exploring tech trends, guiding peers, or
+                working on creative side projects.
+                Let’s connect and build something amazing!
+            </p>
+        </div>
+        <div><img src="971.jpg" alt="" width="300" height="200"></div>
+    </div>
+
+    <h1>On Going Projects</h1>
+    <div class="card-container">
+        <div class="card">
+            <img src="a.jpg" alt="">
+            <h2>AUTO VENUMA</h2>
+            <p>"Auto Venuma" is an ongoing project aimed at streamlining local transportation through a dedicated
+                auto-rickshaw booking app. Designed for urban and semi-urban areas, it allows users to locate nearby
+                autos, estimate fares, and book rides instantly. The app focuses on simplicity, real-time tracking, and
+                local language support to make auto travel more accessible and organized.</p>
+        </div>
+        <div class="card">
+            <img src="bus.png" alt="">
+            <h2>AT TRAVELS</h2>
+            <p>"AT Travels" is an in-progress bus ticket booking platform tailored for regional and long-distance
+                travel. It aims to allow users to search routes, view available buses, choose seats, and make secure
+                bookings. The application is being built with a focus on clear UI, booking history, cancellation
+                options, and integration with payment gateways.</p>
+        </div>
+        <div class="card">
+            <img src="cab.png" alt="">
+            <h2>Cab Booking Application</h2>
+            <p>This project is a prototype of a cab booking system that allows users to schedule rides, track cabs live,
+                and receive driver updates. The plan includes user authentication, trip history, fare calculators, and
+                map integration. The backend is powered by Python, while the frontend is being developed with HTML, CSS,
+                and JavaScript.</p>
+        </div>
+    </div>
+
+    <footer class="footer"
+        style="background-color: whitesmoke; padding: 40px 0; border-top: 1px solid #ccc; font-family: 'Libre Caslon Text', serif;">
+        <div class="container-links" style="text-align: center; margin-bottom: 25px;">
+            <ul
+                style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <li><a href="#" style="text-decoration: none; color: #333; font-size: 16px;">Home</a></li>
+                <li><a href="#aboutme" style="text-decoration: none; color: #333; font-size: 16px;">About Me</a></li>
+                <li><a href="#" style="text-decoration: none; color: #333; font-size: 16px;">Services</a></li>
+                <li><a href="#" onclick="openForm()"
+                        style="text-decoration: none; color: #333; font-size: 16px;">Contact Me</a></li>
+            </ul>
+        </div>
+
+        <div class="foot-container" id="footer" style="text-align: center; color: #444;">
+            <h2 style="margin-bottom: 10px; font-size: 22px;">Contact Me</h2>
+            <p style="margin-bottom: 20px; font-size: 15px;color: grey;">If you have any questions or would like to get
+                in touch,
+                feel free to reach out!</p>
+
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <a href="mailto:jasonantony02@gmail.com" target="_blank"
+                    style="color: #444; text-decoration: none; font-size: 16px;">
+                    <i class="fas fa-envelope" style="margin-right: 8px;"></i>Email
+                </a>
+                <a href="https://github.com/Jasonantony" target="_blank"
+                    style="color: #444; text-decoration: none; font-size: 16px;">
+                    <i class="fab fa-github" style="margin-right: 8px;"></i>GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/jasonanto007/" target="_blank"
+                    style="color: #444; text-decoration: none; font-size: 16px;">
+                    <i class="fab fa-linkedin" style="margin-right: 8px;"></i>LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Contact Form Modal -->
+    <div id="contactFormModal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:999; overflow:auto;">
+        <div
+            style="background:white; max-width:500px; margin:80px auto; padding:30px; border-radius:10px; position:relative; font-family: 'Libre Caslon Text', serif; max-height:90vh; overflow-y:auto;">
+            <span onclick="closeForm()"
+                style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
+            <h2 style="text-align:center;">Fill it Up!!!</h2>
+            <form action="https://formsubmit.co/jasonantony02@gmail.com" method="POST">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_autoresponse"
+                    value="Thank you for contacting Jason! I will respond shortly.">
+                <input type="hidden" name="_captcha" value="false">
+
+                <label>Your Name:</label>
+                <input type="text" name="Name" required
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+
+                <label>Company Name:</label>
+                <input type="text" name="Company"
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+
+                <label>Contact Number:</label>
+                <input type="text" name="Contact Number" required
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+
+                <label>Service:</label>
+                <select name="Service Required" required
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+                    <option value="Web Development">Web Development</option>
+                    <option value="API Development">API Development</option>
+                    <option value="Deployment & Hosting">Deployment & Hosting</option>
+                    <option value="Debugging">Debugging</option>
+                </select>
+
+                <label>Describe Your Challenges:</label>
+                <textarea name="Challenges" rows="3" required
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;"></textarea>
+
+                <label>Your Email:</label>
+                <input type="email" name="Email" required
+                    style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px;">
+
+                <button type="submit"
+                    style="width:100%; padding:12px; background:black; color:white; border:none; font-weight:bold; border-radius:5px; cursor:pointer;">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Script -->
+    <script>
+        function openForm() {
+            document.getElementById('contactFormModal').style.display = 'block';
+        }
+
+        function closeForm() {
+            document.getElementById('contactFormModal').style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('contactFormModal');
+            if (event.target == modal) {
+                closeForm();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
