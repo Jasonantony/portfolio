@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason's Port</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molle&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+        /* navbar styling */
+        .navbar {
+            padding: 1rem;
+            background-color: transparent;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+        }
+
+        .navbar:hover {
+            box-shadow: 0 6px 12px rgba(107, 89, 89, 0.15);
+        }
+
+        .navbar-brand {
+            font-family: 'Molle', cursive;
+            font-size: 2.5rem;
+        }
+
+        .nav-link {
+            list-style: none;
+            float: right;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .nav-link:hover {
+            color: #212529 !important;
+        }
+
+        .nav-link.active {
+            color: #0d6efd !important;
+        }
+
+        /* navbar styling ends */
+
+        /* photo section */
+        #me {
+            background: rgba(255, 255, 255, 0.2);
+            /* Transparent white */
+            backdrop-filter: blur(10px);
+            /* Blur effect */
+            -webkit-backdrop-filter: blur(10px);
+            /* Safari support */
+            border-radius: 16px;
+            padding: 2rem;
+            color: #1d1818;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Education Section */
+        #education {
+            background: rgba(255, 255, 255, 0.2);
+            /* Transparent white */
+            backdrop-filter: blur(10px);
+            /* Blur effect */
+            -webkit-backdrop-filter: blur(10px);
+            /* Safari support */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            color: #1d1818;
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            /* Center the section horizontally */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        #education img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            padding: 0;
+        }
+
+
+        #president {
+            background: white;
+            /* Transparent white */
+            backdrop-filter: blur(10px);
+            /* Blur effect */
+            -webkit-backdrop-filter: blur(10px);
+            /* Safari support */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            color: #201c1c;
+            width: 90%;
+            max-width: 1300px;
+            margin: 40px auto;
+            justify-content: center;
+        }
+
+        #president img {
+            width: 300px;
+            height: 300px;
+            border-radius: 5%;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            text-align: center;
+            font-family: "Molle", cursive;
+        }
+
+        h1:hover {
+            color: #0d6efd;
+            transition: color 0.5s ease-in-out;
+        }
+
+        /* skills stylers */
+        .academic-skills {
+
+            background: rgba(255, 255, 255, 0.2);
+            /* Transparent white */
+            backdrop-filter: blur(10px);
+            /* Blur effect */
+            -webkit-backdrop-filter: blur(10px);
+            /* Safari support */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            color: #1d1818;
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            /* Center the section horizontally */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+
+        #skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: 9px;
+        }
+
+        .card:hover {
+            color: #0d6efd;
+            transition: color 0.3s ease-in;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+
+        /* project card stylers */
+        #project {
+            background: rgba(255, 255, 255, 0.2);
+            /* Transparent white */
+            backdrop-filter: blur(10px);
+            /* Blur effect */
+            -webkit-backdrop-filter: blur(10px);
+            /* Safari support */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 10px;
+            margin: 10px;
+            color: #1d1818;
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        /* footer styling */
+        #footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: #4a4c4e;
+            padding: 10px 0;
+        }
+
+        /* footer styling ends */
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="font-family: Molle;"> Tech Vorin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link d-inline-flex focus-ring py-1 px-2 text-decoration-none rounded"
+                            aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-inline-flex focus-ring py-1 px-2 text-decoration-none rounded"
+                            href="#about">Forge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-inline-flex focus-ring py-1 px-2 text-decoration-none rounded"
+                            href="#project">Unveiled</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-inline-flex focus-ring py-1 px-2 text-decoration-none rounded"
+                            href="#contact">Reach Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- myphoto seciton -->
+    <section>
+        <div class="container" id="me" style="background-color: whitesmoke;">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="mee.png" alt="Jason's Photo" class="img-fluid" style="width: 500px; height: 400px;">
+                </div>
+                <div class="col-lg-6" style="padding-top: 50px; align-items: center ;">
+                    <h1 class="display-4">Hello, I'm Jason!</h1>
+                    <p class="lead">A passionate developer with a love for creating innovative solutions.</p>
+                    <p>Welcome to my portfolio! Here, you'll find a showcase of my projects and skills. I believe in
+                        the power of technology to transform ideas into reality.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+
+    <h1>Where It All Began...</h1>
+    <section id="about">
+        <div class="row" id="education">
+            <div class="col-lg-3">
+                <img src="lsc.png" alt="lsc logo">
+            </div>
+            <div class="col-9" style="align-items: center; justify-content: center;">
+                <h2>B.Sc Computer Science</h2>
+                <p>I completed my bachelor's in <b>LOYOLA COLLEGE OF ARTS AND
+                        SCIENCE,<small>METTALA</small></b>,
+                    where I explored everything from algorithms to artful
+                    code. <br>I graduated with a CGPA of 8.4, and a deeper appreciation for clean logic, creative
+                    problem-solving, and long nights fueled by curiosity.</p>
+            </div>
+        </div>
+        <div class="row" id="education">
+            <div class="col-lg-3">
+                <img src="hsc.jpeg" alt="">
+            </div>
+            <div class="col-9">
+                <h2>HSC</h2>
+                <p>The Little Flower Higher Secondary School<br>
+                    &nbsp; In 2022, I completed my higher secondary education with a 77%, building a strong foundation
+                    in mathematics, physics, chemistry and computer science — and discovering my love for solving
+                    complex problems
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- skill seciton -->
+    <section class="academic-skills">
+        <h2>Academic Strengths</h2>
+        <p>My academic journey has equipped me with a diverse set of skills that enhance my problem-solving
+            capabilities and technical expertise. I thrive on challenges and enjoy applying my knowledge to real-world
+            scenarios.</p>
+
+        <h4>Skills I went through.. :</h4>
+
+        <div class="row" id="skills">
+            <div class="col-lg-3">
+                <div class="card" style="width: 16rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Problem Solving</h5>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-lg-3">
+                <div class="card" style="width: 16rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">DSA</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card" style="width: 16rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Time Management</h5>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3">
+                <div class="card" style="width: 16rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Team Collaboration</h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- second skill sets -->
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card" style="width: 16rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Logical Thinking</h5>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-lg-3">
+                <div class="card" style="width: 16rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Presentation Skills</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card" style="width: 16rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Critical Analysis</h5>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3">
+                <div class="card" style="width: 16rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Abstract Thinking</h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- President post -->
+    <h1>Beyond the Classroom</h1>
+    <section>
+        <div class="container" id="president">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="Pres_photo.JPG" alt="president photo" class="img-fluid">
+                </div>
+
+                <div class="col-1">
+                    <div class="d-flex" style="height: 350px; color: #212529; font-size: larger;">
+                        <div class="vr"></div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-7" style="text-align: justify;">
+                    <h4>President of the Student Council</h4>
+                    <p>&nbsp;In 2023, I was elected President of the Student Council,
+                        a
+                        role that allowed me to lead
+                        student
+                        initiatives, organize events, and represent the student body.
+                        <br><br>
+                        &nbsp;One major highlight was Ignite, our annual cultural fest, where we welcomed <b>actor and
+                            comedian Mr.Satheesh</b> as the chief guest. The event drew large participation and taught
+                        me
+                        the importance of
+                        team coordination, planning, and execution.
+                        <br>
+                        <br>
+
+                        &nbsp;
+                        Throughout my tenure, I worked closely with faculty and peers to address student concerns and
+                        improve campus life. This experience strengthened my leadership, communication, and
+                        problem-solving skills while deepening my commitment to positive change.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- projects section -->
+    <section id="project">
+        <div class="container">
+            <h1 class="text-center">Projects</h1>
+            <p class="text-center">Here are some of the projects I've worked on:</p>
+
+            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center gap-4">
+                            <div class="card" style="width: 20rem;">
+                                <img src="crime.png" class="card-img-top" alt="...">
+                                <div class="card-body text-justify">
+                                    <h5 class="card-title">Crime Reporting Portal</h5>
+                                    <h6>Tech Stack: Python, Flask, HTML, CSS, JavaScript</h6>
+                                    <p class="card-text">Developed a secure web portal for reporting crimes. Includes
+                                        complaint submission, case tracking, and legal resources. Soon to be in
+                                        production.</p>
+                                    <a href="#" class="btn btn-primary">Soon</a>
+                                </div>
+                            </div>
+
+                            <div class="card" style="width: 20rem;">
+                                <img src="auto.png" class="card-img-top" alt="...">
+                                <div class="card-body text-justify">
+                                    <h5 class="card-title">AutoVenuma</h5>
+                                    <h6>Tech Stack: Python, Flask, HTML, CSS, JavaScript</h6>
+                                    <p class="card-text">Auto booking system for Salem auto drivers. Deployed and live,
+                                        with ongoing real-world feedback integration.</p>
+                                    <a href="https://autovenuma.onrender.com/" target="_blank"
+                                        class="btn btn-primary">Live</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center gap-4">
+                            <div class="card" style="width: 20rem;">
+                                <img src="cab.png" class="card-img-top" alt="...">
+                                <div class="card-body text-justify">
+                                    <h5 class="card-title">Cab Booking Terminal App</h5>
+                                    <h6>Tech Stack: Python</h6>
+                                    <p class="card-text">Terminal-based simulation of cab services with fare
+                                        calculation, cab selection, and booking flow.</p>
+                                    <a href="#" class="btn btn-primary">View Code</a>
+                                </div>
+                            </div>
+
+                            <div class="card" style="width: 20rem;">
+                                <img src="inventory.png" class="card-img-top" alt="...">
+                                <div class="card-body text-justify">
+                                    <h5 class="card-title">Inventory Management System</h5>
+                                    <h6>Tech Stack: Python, Tkinter</h6>
+                                    <p class="card-text">Desktop app to manage inventory, billing, and stock for small
+                                        businesses. Built as an academic showcase.</p>
+                                    <a href="#" class="btn btn-primary">View Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <p class="text-center mb-5">Have a question, want to work together, or just want to say hello? Feel free to
+                reach out!</p>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h5><i class="bi bi-envelope-fill me-2"></i>Email</h5>
+                    <p><a href="mailto:your.email@example.com">jasonantony02@gmail.com</a></p>
+
+                    <h5><i class="bi bi-phone-fill me-2"></i>Phone</h5>
+                    <p>+91 93459 32806</p>
+
+                    <h5><i class="bi bi-geo-alt-fill me-2"></i>Location</h5>
+                    <p>Salem, Tamil Nadu, India</p>
+
+                    <h5><i class="bi bi-linkedin me-2"></i>LinkedIn</h5>
+                    <p><a href="https://www.linkedin.com/in/jasonanto007/" target="_blank"
+                            style="text-decoration: none;">linkedin.com</a>
+                    </p>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-md-6">
+                    <form action="https://formspree.io/f/xzzvrqod" method="POST" id="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your email"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4"
+                                placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- footer -->
+    <div class=" container-fluid" id="footer">
+        <footer class="text-center text-lg-start  text-muted">
+            <div class="text-center p-4">
+                © 2023 Tech Vorin. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent default submission for manual handling
+
+            const form = e.target;
+
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert("Thanks! Your message has been sent.");
+                    form.reset(); // ✅ Reset the form
+                } else {
+                    alert("Oops! Something went wrong.");
+                }
+            }).catch(error => {
+                alert("Oops! There was a problem submitting your form.");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
